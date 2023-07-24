@@ -1,0 +1,13 @@
+package aop.pojo;
+
+public class EmpMain {
+
+	public static void main(String[] args) {
+		
+		Programmer emp1 = new Programmer();
+		emp1.work();
+		
+		Designer emp2 = new Designer();
+		emp2.work();
+	}
+}

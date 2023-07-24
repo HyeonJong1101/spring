@@ -1,0 +1,26 @@
+package di.pojo;
+
+public class Car {
+	
+	private Tire tire;
+	
+	public Car() {
+		
+	}
+	
+	public Car(Tire tire) {
+		this.tire = tire;
+		//tire = new KumhoTire();
+		//tire = new HankookTire();
+	}
+	
+	
+	public void printTireBrand() {
+		System.out.println("장착 타이어 : "+tire.getBrand());
+	}
+
+	public void setTire(HankookTire han) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,6 @@
+package di.amo;
+
+public interface Tire {
+
+	String getBrand();
+}

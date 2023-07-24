@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="di.pojo.Car"/>
+    <fullyQualifiedTypeName name="di.pojo.Tire"/>
+    <fullyQualifiedTypeName name="di.xml.Car"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="aop.pojo.Programmer"/>
+    <fullyQualifiedTypeName name="aop.pojo.Designer"/>
+    <fullyQualifiedTypeName name="aop.pojo.Employee"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+    <fullyQualifiedTypeName name="board.dao.MyConfig"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

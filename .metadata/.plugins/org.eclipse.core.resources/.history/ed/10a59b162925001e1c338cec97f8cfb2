@@ -1,0 +1,16 @@
+package di.pojo;
+
+public class DIMain {
+
+	public static void main(String[] args) {
+		
+		HankookTire han = new HankookTire();
+		KumhoTire kum = new KumhoTire();
+		
+		//Car car = new Car(han); //의존주입
+		Car car = new Car(kum); //의존주입
+		
+		car.printTireBrand();
+	}
+}
+

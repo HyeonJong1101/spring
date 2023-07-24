@@ -1,0 +1,11 @@
+package di.xml;
+
+import org.springframework.context.support.GenericApplicationContext;
+
+public class DIMain {
+	
+	public static void main(String[] args) {
+		
+		new GenericApplicationContext();
+	}
+}

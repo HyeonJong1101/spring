@@ -1,0 +1,9 @@
+package di.anno;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public interface Tire {
+
+	String getBrand();
+}

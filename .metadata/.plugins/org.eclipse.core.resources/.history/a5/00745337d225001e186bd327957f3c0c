@@ -1,0 +1,10 @@
+package aop.pojo;
+
+public class EmpMain {
+
+	public static void main(String[] args) {
+		
+		Programmer p = new Programmer();
+		p.work();
+	}
+}

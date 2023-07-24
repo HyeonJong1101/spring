@@ -1,0 +1,16 @@
+package di.xml;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
+
+import di.pojo.Car;
+
+public class DIMain {
+	
+	public static void main(String[] args) {
+		
+		ApplicationContext context =  new GenericApplicationContext("di-xml.xml");
+		
+		Car car = context.getBean("car", Car.class);
+	}
+}

@@ -1,0 +1,68 @@
+package board.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import board.vo.BoardVO;
+
+public class BoardDAO {
+	
+	private SqlSession session;
+	
+	public BoardDAO() {
+		session = new MyConfig().getInstance();
+	}
+
+	public void insert() {
+		
+		//String title = "이번에는 꼭!!!";
+		BoardVO board = new BoardVO();
+		board.setTitle("vo객체");
+		board.setWriter("hong");
+		
+		//int cnt = session.insert("board.dao.BoardDAO.insert", title);
+		int cnt = session.insert("board.dao.BoardDAO.insert", board);
+		session.commit();
+		System.out.println("총 " + cnt + "개 행 삽입...");
+	}
+	
+	public void select() {
+		//전체게시글 조회
+		
+		List<BoardVO> list = session.selectList("board.dao.BoardDAO.selectAll2");
+		for(BoardVO board : list) {
+			System.out.println(board);
+		}
+	}
+	
+	public void selectOne() {
+		int boardNo = 4;
+		BoardVO result = session.selectOne("board.dao.BoardDAO.selectByNo", 4);
+		System.out.println(result);
+
+		BoardVO board = new BoardVO();
+		board.setNo(4);
+		result = session.selectOne("board.dao.BoardDAO.selectByNo2", board);
+		System.out.println(result);
+	}
+	
+	public void selectWhere() {
+		//제목이 될까?? 이면서 글쓴이가 홍길동인 게시물 조회
+		BoardVO board = new BoardVO();
+		board.setTitle("제목1");
+		board.setWriter("홍길동");
+		
+		List<BoardVO> list = session.selectList("board.dao.BoardDAO.selectWhere", board);
+		for(BoardVO boardvo : list) {
+			System.out.println(boardvo);
+		}
+	}
+	
+	public void work() {
+		//insert();
+		//select();
+		//selectOne();
+		selectWhere();
+	}
+}

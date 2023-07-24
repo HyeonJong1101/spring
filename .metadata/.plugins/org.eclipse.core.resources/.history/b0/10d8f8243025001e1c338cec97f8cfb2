@@ -1,0 +1,9 @@
+package di.xml;
+
+public class DIMain {
+	
+	public static void main(String[] args) {
+		
+		
+	}
+}

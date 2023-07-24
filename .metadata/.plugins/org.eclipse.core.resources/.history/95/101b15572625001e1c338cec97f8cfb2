@@ -1,0 +1,8 @@
+package di.pojo;
+
+public class Car {
+	
+	private HankookTire tire;
+	
+	
+}

@@ -1,0 +1,5 @@
+		메소드	요청URI				jsp위치
+전체게시글조회	GET	/board				/WEB-INF/jsp/board/list.jsp
+상세게시글조회	GET	/board/detail?no=4	/WEB-INF/jsp/board/detail.jsp
+				/board/4
+				/board/21

@@ -5,8 +5,18 @@
 <mapper namespace="board.dao.BoardDAO">
 	<!-- 전체게시글 조회 -->
 	<select id="selectAllBoard" resultType="boardVO">
+		<!-- 
 		select no, title, writer, to_char(reg_date, 'yyyy-mm-dd') regDate
 		  from t_board
+		 order by no desc
+		 -->
+		 select no, title, writer
+		     , to_char(reg_date, 'yyyy-mm-dd') regDate
+		     , ( select count(*) 
+		           from t_reply 
+		          where board_no = b.no
+		       ) as replyCnt
+		 from t_board b
 		 order by no desc
 	</select>
 
@@ -18,6 +28,12 @@
 		  from t_board
 		 where no = #{no}
 	</select>
+	
+	<!-- 새글등록 -->
+	<insert id="insertBoard" parameterType="boardVO">
+		insert into t_board(no, title, writer, content) 
+		 values(seq_t_board_no.nextval, #{title}, #{writer}, #{content})
+	</insert>
 </mapper>
 
 
